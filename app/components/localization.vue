@@ -83,6 +83,7 @@
   }
   
   .local-info h2 {
+    font-family: "Yeseva One", serif;
     font-size: 2.3rem;
     margin-bottom: 20px;
     color: #333;
