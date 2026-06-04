@@ -112,6 +112,7 @@
     }
 
     .separator {
+        color: var(--main-font-color);
         font-size: 48px;
         font-weight: 700;
         line-height: 1;
