@@ -19,6 +19,7 @@
     <div class="pix-box">
         <span>Chave PIX</span>
         <strong>866.112.885-46</strong>
+        <span class="name">Pedro Henrique Araújo dos Santos</span>
     </div>
 </section>
 </template>
@@ -62,6 +63,10 @@
     color: #777;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.pix-box .name {
+    color: #000;
 }
 
 .pix-box strong {
