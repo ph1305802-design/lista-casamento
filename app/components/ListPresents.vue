@@ -1,5 +1,7 @@
 <template>
+    <div class="div-presentes">
     <h1 class="titulo-presentes">Presentes</h1>
+    <p class="subtitle-presentes">Esta lista reúne algumas ideias de presentes que combinam com o nosso gosto e nossos planos. Ela serve apenas como inspiração, sem a necessidade de seguir as opções à risca. 💕 (2 Cor. 9:7)</p>
     <div class="lista-presentes">
         <div v-for="item in presentesDisponiveis" :key="item.id" class="presente">
             <div class="presente__imagem">
@@ -9,7 +11,11 @@
             <div class="presente__conteudo">
                 <h3>{{ item.nome }}</h3>
 
-                <p class="valor">R$ {{ Number(item.valor.replace(",", ".")).toFixed(2).replace(".", ",") }}</p>
+                <p v-if="item.valor" class="valor">R$ {{ Number(item.valor.replace(",", ".")).toFixed(2).replace(".", ",") }}</p>
+
+                <p v-if="!item.valor">
+                    Valor Indefinido
+                </p>
 
                 <a :href="item['Link do produto']" target="_blank" rel="noopener noreferrer" class="btn-produto">
                     Ver produto
@@ -17,6 +23,7 @@
             </div>
         </div>
     </div>
+</div>
 </template>
 <script setup>
     import { ref, onMounted, computed } from "vue";
@@ -35,6 +42,19 @@
     });
 </script>
 <style scoped>
+    .div-presentes {
+        padding: 42px 0px;
+    }
+    .subtitle-presentes {
+        font-family: "Lexend", sans-serif;
+        text-align: center;
+        color: var(--main-font-color);
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 450px;
+        padding-bottom: 42px;
+        margin: 0 auto;
+    }
     .titulo-presentes {
         font-family: "Yeseva One", serif;
         text-align: center;
