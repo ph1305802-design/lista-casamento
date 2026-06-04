@@ -43,7 +43,7 @@
 </script>
 <style scoped>
     .div-presentes {
-        padding: 42px 0px;
+        padding: 42px 24pxpx;
     }
     .subtitle-presentes {
         font-family: "Lexend", sans-serif;
@@ -51,7 +51,9 @@
         color: var(--main-font-color);
         font-size: 18px;
         font-weight: 400;
-        max-width: 450px;
+        max-width: 498px;
+        padding-left: 24px;
+        padding-right: 24px;
         padding-bottom: 42px;
         margin: 0 auto;
     }
@@ -61,6 +63,12 @@
         color: var(--main-font-color);
         font-size: 52px;
         text-transform: uppercase;
+    }
+    @media screen and (max-width: 600px) {
+        .titulo-presentes {
+            font-size: 2.5rem;
+        }
+        
     }
     .lista-presentes {
         display: grid;
