@@ -4,7 +4,7 @@
         <h3>Pedro & Polyanna ❤️</h3>
   
         <p>
-          Obrigado por fazer parte deste momento tão especial em nossas vidas.
+          Obrigado por fazer parte deste momento tão especial em nós.
         </p>
   
         <div class="contatos">
@@ -12,8 +12,8 @@
             ✉️ contatopedrohrq@gmail.com
           </a>
   
-          <a href="https://wa.me/5571999522030" target="_blank">
-            📱 (71) 99952-2030
+          <a href="https://wa.me/5571996254600" target="_blank">
+            📱 (71) 99625-4600
           </a>
         </div>
   
