@@ -333,8 +333,8 @@
   /* --- BOTÃO DO CARD --- */
   .btn-produto {
     border: none;
-    background: #ede7df;
-    color: #5c534c;
+    background: var(--main-primary-color);
+    color: #ffffff;
     border-radius: 16px;
     padding: 14px;
     font-size: 1rem;
@@ -346,7 +346,7 @@
   }
   
   .btn-produto:hover {
-    background: var(--main-primary-color, #b8977e);
+    background: #bb4420;
     color: white;
   }
   
