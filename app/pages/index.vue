@@ -3,9 +3,6 @@
     <div>
         <Sobre />
     </div>
-    <div>
-        <Localization />
-    </div>
     <!-- Crie a seção dos presentes -->
     <div class="flex flex-col items-center">
         <ListPresents />
