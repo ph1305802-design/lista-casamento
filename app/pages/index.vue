@@ -11,9 +11,6 @@
         <ListPresents />
     </div>
     
-    <div>
-        <Contribuition />
-    </div>
 
     <div>
         <Footer />
