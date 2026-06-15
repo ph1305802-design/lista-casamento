@@ -6,7 +6,14 @@
         Ela serve apenas como inspiração, sem a necessidade de seguir os valores à risca. 💕 (2 Cor. 9:7)
       </p>
   
+      <div v-if="!presentesDisponiveis.length" class="w-100 flex justify-center">
+        <div >
+          <button class="btn-produto mx-4" @click="getListPresentes()">Mostrar presentes</button>
+        </div>
+          
+        </div>
       <div class="lista-presentes">
+        
         <div v-for="item in presentesDisponiveis" :key="item.id" class="presente">
           <div class="presente__imagem">
             <img :src="item.imagem" :alt="item.nome" loading="lazy" />
@@ -110,14 +117,18 @@
       atualizarQrCode();
     }
   });
+
+  const getListPresentes = async () => {
+    const response = await fetch(
+        "https://opensheet.elk.sh/1lAGOKV6g-_f-zx7dUK45Yz2tJu7GMh9HL6F0XjpUdtA/P%C3%A1gina1"
+      );
+      presentes.value = await response.json();
+  }
   
   // --- CICLO DE VIDA (LIFECYCLE) ---
   onMounted(async () => {
     try {
-      const response = await fetch(
-        "https://opensheet.elk.sh/1lAGOKV6g-_f-zx7dUK45Yz2tJu7GMh9HL6F0XjpUdtA/P%C3%A1gina1"
-      );
-      presentes.value = await response.json();
+      await getListPresentes();
     } catch (error) {
       console.error("Erro ao carregar a lista de presentes:", error);
     }
@@ -224,8 +235,11 @@
   <style scoped>
   /* --- LAYOUT GERAL --- */
   .div-presentes {
-    padding: 42px 24px;
-  }
+  padding: 42px 24px;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
   
   .titulo-presentes {
     font-family: "Yeseva One", serif;
@@ -250,13 +264,16 @@
   
   /* --- GRID DE PRESENTES --- */
   .lista-presentes {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 32px;
-    padding: 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
   
   /* --- CARDS DE PRESENTES --- */
   .presente {
@@ -513,6 +530,11 @@
       grid-template-columns: 1fr;
       gap: 24px;
       padding: 16px;
+    }
+    .presente {
+      border-radius: 8px;
+      max-width: 350px;
+      margin: 0 auto;
     }
     .pix-modal {
       padding: 24px;
