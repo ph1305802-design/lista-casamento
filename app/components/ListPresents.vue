@@ -78,7 +78,6 @@
   </template>
   
   <script setup>
-  import { ref, computed, onMounted } from "vue";
   import QRCode from "qrcode";
   
   // --- CONFIGURAÇÕES / CONSTANTES ---
