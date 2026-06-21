@@ -119,7 +119,7 @@
 
   const getListPresentes = async () => {
     const response = await fetch(
-        "https://opensheet.elk.sh/1lAGOKV6g-_f-zx7dUK45Yz2tJu7GMh9HL6F0XjpUdtA/P%C3%A1gina1"
+        "/products.json"
       );
       presentes.value = await response.json();
   }
