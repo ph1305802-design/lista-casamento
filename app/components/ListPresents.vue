@@ -79,6 +79,7 @@
   
   <script setup>
   import QRCode from "qrcode";
+  import products from '@/data/products.json';
   
   // --- CONFIGURAÇÕES / CONSTANTES ---
   const PIX_KEY = "86611288546"; // CPF sem pontuação
@@ -86,7 +87,7 @@
   const PIX_CITY = "SALVADOR";
   
   // --- ESTADOS REATIVOS ---
-  const presentes = ref([]);
+  const presentes = ref(products);
   const modalAberto = ref(false);
   const presenteSelecionado = ref(null);
   const qrCode = ref("");
@@ -117,13 +118,6 @@
     }
   });
 
-  const getListPresentes = async () => {
-    const response = await fetch(
-        "/products.json"
-      );
-      presentes.value = await response.json();
-  }
-  
   // --- CICLO DE VIDA (LIFECYCLE) ---
   onMounted(async () => {
     try {
