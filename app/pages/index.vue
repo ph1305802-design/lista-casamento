@@ -4,7 +4,7 @@
         <Sobre />
     </div>
     <!-- Crie a seção dos presentes -->
-    <div class="flex flex-col items-center">
+    <div id="lista-presente" class="flex flex-col items-center">
         <ListPresents />
     </div>
     
@@ -24,6 +24,7 @@
     }
     body {
         font-family: "Lexend", sans-serif;
+        scroll-behavior: smooth;
     }
     
 </style>
