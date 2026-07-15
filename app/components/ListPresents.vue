@@ -2,8 +2,7 @@
   <div class="div-presentes">
     <h1 class="titulo-presentes">Presentes</h1>
     <p class="subtitle-presentes">
-      Esta lista reúne algumas ideias de presentes que combinam com o nosso gosto e nossos planos. 
-      Ela serve apenas como inspiração, sem a necessidade de seguir os valores à risca. 💕 (2 Cor. 9:7)
+      Para tornar tudo mais prático, optamos pela lista virtual, onde os presentes são revertidos em PIX. Porém as imagens mostram modelos de presentes que realmente gostamos, para inspirar quem desejar nos presentear com coisas da casa💕 (2 Cor. 9:7)
     </p>
 
     <div v-if="!presentesDisponiveis.length" class="w-100 flex justify-center">
