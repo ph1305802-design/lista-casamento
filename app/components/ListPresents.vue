@@ -527,6 +527,7 @@ box-sizing: border-box;
     border-radius: 8px;
     max-width: 350px;
     margin: 0 auto;
+    width: 100%;
   }
   .pix-modal {
     padding: 24px;
